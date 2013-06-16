@@ -8,5 +8,9 @@ def index():
     return 'The index page...'
     
 @app.route('/querytest/<query>')
-def hello(query):
+def queryview(query):
     return 'Query %s' % query
+    
+@app.route('/gh/~<user>/<page>')
+def viewghuser(user,page):
+    return 'User %s' % user
