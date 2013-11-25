@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'The index page...'
+    #return 'The index page...'
+    return render_template('p/index.html', message="Index Page")
     
 @app.route('/querytest/<query>')
 def queryview(query):
